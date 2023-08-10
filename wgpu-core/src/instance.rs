@@ -67,6 +67,7 @@ pub struct Instance {
     pub dx11: Option<HalInstance<hal::api::Dx11>>,
     #[cfg(feature = "gles")]
     pub gl: Option<HalInstance<hal::api::Gles>>,
+    pub empty: Option<HalInstance<hal::api::Empty>>,
 }
 
 impl Instance {
@@ -141,6 +142,7 @@ pub struct Surface {
     pub dx11: Option<HalSurface<hal::api::Dx11>>,
     #[cfg(feature = "gles")]
     pub gl: Option<HalSurface<hal::api::Gles>>,
+    pub empty: Option<HalInstance<hal::api::Empty>>,
 }
 
 impl crate::resource::Resource for Surface {
